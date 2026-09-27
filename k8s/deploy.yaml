@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backstage-app
+  labels:
+    app: backstage-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backstage-app
+  template:
+    metadata:
+      labels:
+        app: backstage-app
+    spec:
+      containers:
+      - name: backstage-app
+        image: hansrandy/backstage-app:latest
+        ports:
+        - containerPort: 5000
