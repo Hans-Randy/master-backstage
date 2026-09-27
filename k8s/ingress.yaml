@@ -4,8 +4,7 @@ metadata:
   name: backstage-app
 spec:
   rules:
-  - host: "backstage-app.test.com"
-    http:
+  - http:
         paths:
         - path: /
           pathType: Prefix
